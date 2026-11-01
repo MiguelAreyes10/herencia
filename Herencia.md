@@ -1,14 +1,3 @@
-# ==============================================================
-# Actividad: Extensión de aplicación usando Herencia
-# Asignatura: Programación Orientada a Objetos
-# Descripción: Se define una clase base y dos subclases que heredan,
-# reutilizan, sobrescriben y amplían funcionalidades.
-# ==============================================================
-
-# ------------------------------
-# Clase Base: Aplicacion
-# Contiene atributos y métodos comunes a cualquier aplicación
-# ------------------------------
 class Aplicacion:
     """Clase base que representa una aplicación genérica"""
     
@@ -42,14 +31,7 @@ class Aplicacion:
             f"🔢 Versión: {self.version}\n"
             f"👤 Desarrollador: {self.desarrollador}\n"
             f"🔌 Estado: {self.estado}"
-        )
-
-
-# ------------------------------
-# Subclase: AplicacionMovil
-# Hereda de Aplicacion → reutiliza sus atributos y métodos
-# Agrega atributo propio: plataforma
-# ------------------------------
+        
 class AplicacionMovil(Aplicacion):
     """Subclase para aplicaciones móviles, hereda de Aplicacion"""
     
@@ -71,11 +53,6 @@ class AplicacionMovil(Aplicacion):
         """Método EXCLUSIVO de AplicacionMovil: envía notificación"""
         return f"🔔 Notificación en {self.plataforma}: {mensaje}"
 
-
-# ------------------------------
-# Subclase: AplicacionEscritorio
-# Hereda de Aplicacion → reutiliza, sobrescribe y agrega funcionalidad
-# ------------------------------
 class AplicacionEscritorio(Aplicacion):
     """Subclase para aplicaciones de escritorio, hereda de Aplicacion"""
     
@@ -96,12 +73,7 @@ class AplicacionEscritorio(Aplicacion):
         return (
             f"🔄 Actualizando {self.nombre}: "
             f"v{version_anterior} → v{self.version} en {self.sistema_operativo}"
-        )
-
-
-# ------------------------------
-# Programa Principal: Instanciación y pruebas
-# ------------------------------
+        
 if __name__ == "__main__":
     print("=" * 50)
     print("PRUEBA DE HERENCIA EN APLICACIONES")
